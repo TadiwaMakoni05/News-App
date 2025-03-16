@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply bg-black text-white overflow-x-hidden;
+}
+
+img{
+    @apply rounded
+}
+
+.navbar-active{
+    background-color: black;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: white;
+}
