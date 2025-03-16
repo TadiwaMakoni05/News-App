@@ -11,8 +11,11 @@ img{
     @apply rounded
 }
 
-.navbar-active{
-    background-color: black;
+.navbar-active.dark{
+    background-color: white;
+}
+.navbar-active.white{
+    background-color: dark;
 }
 ::-webkit-scrollbar{
     width: 5px;

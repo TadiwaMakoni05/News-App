@@ -10,10 +10,10 @@ import { ApplicationContext } from '../context/ApplicationContext'
 
 
 const Catergory = () => {
-      const {articles} = useContext(ApplicationContext)
+      const {articles,theme} = useContext(ApplicationContext)
 
   return (
-    <div className='m-9 p-4 flex flex-col md:flex md:flex-col'>
+    <div className={`m-9 p-4 flex flex-col md:flex md:flex-col ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
         <h1 className='text-lg md:text-xl font-bold'>Articles For You</h1>
         <div className='grid grid-cols-2 gap-8 lg:grid lg:grid-cols-4 lg:gap-4'>
         {

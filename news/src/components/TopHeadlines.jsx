@@ -15,10 +15,10 @@ import { ApplicationContext } from '../context/ApplicationContext'
 
 
 const TopHeadlines = () => {
-  const {articles} = useContext(ApplicationContext)
+  const {articles,theme} = useContext(ApplicationContext)
 
   return (
-    <div className='hidden lg:block lg:max-w-[500px] lg:max-h-[450px]'>
+    <div className={`hidden lg:block lg:max-w-[500px] lg:max-h-[450px] ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
       <h1 className='text-lg font-bold'>Top Headlines</h1>
       <div className='overflow-y-scroll h-[400px]'>
           {articles.map((article,index) => {

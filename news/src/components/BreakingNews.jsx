@@ -3,10 +3,10 @@ import { ApplicationContext } from '../context/ApplicationContext'
 
 
 const BreakingNews = () => {
-    const {single} = useContext(ApplicationContext)
+    const {single,theme} = useContext(ApplicationContext)
   
   return (
-    <div className="my-6">
+    <div className={`my-6 p-4 ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
       <h1 className="my-1 text-base md:text-lg font-bold">Breaking News</h1>
       {
           <a href={single.url} target='_blank'>
